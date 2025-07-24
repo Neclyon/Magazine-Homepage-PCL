@@ -231,10 +231,10 @@ Mfn233                                       @ Github(Mfn233) 为主页提供最
 主页群的各位                               @ QQ群(828081791等) 为主页的开发提供持续的精神力量,快来一起咕咕咕!
 凌云                                            @ Github(JingHai-Lingyun) 提供挂载主页的oss,真的真的非常感激!
 排列没啥顺序，个个我都非常非常非常谢谢你们!</sys:String>
-<sys:String x:Key="WikiPage">https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3</sys:String>
-<sys:String x:Key="VersionID">250601:ffde1eb</sys:String>
-<BitmapImage x:Key="Img" UriSource="https://zh.minecraft.wiki/images/thumb/EmeraldOreCave.png/350px-EmeraldOreCave.png?cccfd"/>
-<sys:String x:Key="Topic">绿宝石矿石</sys:String>
+<sys:String x:Key="WikiPage">https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87</sys:String>
+<sys:String x:Key="VersionID">250724:6d69f59</sys:String>
+<BitmapImage x:Key="Img" UriSource="https://zh.minecraft.wiki/images/thumb/Bedrock_1.19.10.22_PatchNotes.png/350px-Bedrock_1.19.10.22_PatchNotes.png?dff8c"/>
+<sys:String x:Key="Topic">紫水晶碎片</sys:String>
 <Style TargetType="Border" x:Key="HeadImageBorder" >
 <Setter Property="HorizontalAlignment" Value="Center"/>
 <Setter Property="BorderThickness" Value="4"/>
@@ -292,20 +292,19 @@ Mfn233                                       @ Github(Mfn233) 为主页提供最
     </Paragraph>
 <List>
 <!-- intro -->
-<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>是一种只会生成于<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%A3%8E%E8%A2%AD%E4%B8%98%E9%99%B5" Margin="0,0,0,-8">风袭丘陵</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%B1%E5%9C%B0" Margin="0,0,0,-8">山地</local:MyTextButton></Underline>生物群系的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">矿石</local:MyTextButton></Underline>方块，开采后会掉落<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3" Margin="0,0,0,-8">绿宝石</local:MyTextButton></Underline>。</Paragraph></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>是从<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%B0%87" Margin="0,0,0,-8">紫水晶簇</local:MyTextButton></Underline>中掉落的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%9F%BF%E7%89%A9" Margin="0,0,0,-8">矿物</local:MyTextButton></Underline>。</Paragraph></ListItem>
 <!-- end_intro -->
 
 </List><Paragraph Style="{StaticResource H3}">合成 &amp; 生成</Paragraph><List><!-- intro_2 -->
-<ListItem><Paragraph>深层<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>是以<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%B7%B1%E6%9D%BF%E5%B2%A9" Margin="0,0,0,-8">深板岩</local:MyTextButton></Underline>作为容矿岩的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>变种。</Paragraph></ListItem>
+<ListItem><Paragraph>使用不带<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B2%BE%E5%87%86%E9%87%87%E9%9B%86" Margin="0,0,0,-8">精准采集</local:MyTextButton></Underline>魔咒的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%95%90" Margin="0,0,0,-8">镐</local:MyTextButton></Underline>挖掘<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%B0%87" Margin="0,0,0,-8">紫水晶簇</local:MyTextButton></Underline>能获得4个<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>。</Paragraph></ListItem>
 <!-- end_intro_2 -->
 </List>
 <Paragraph Style="{StaticResource H3}">特性 &amp; 用途</Paragraph><List>
-<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>在取代<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%B7%B1%E6%9D%BF%E5%B2%A9" Margin="0,0,0,-8">深板岩</local:MyTextButton></Underline>或<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%87%9D%E7%81%B0%E5%B2%A9" Margin="0,0,0,-8">凝灰岩</local:MyTextButton></Underline>生成时会生成为深层<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>。</Paragraph></ListItem>
-<ListItem><Paragraph>挖掘<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>的合适工具是镐。</Paragraph></ListItem>
-<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>需要铁镐或品质更好的镐来挖掘，否则挖掘时间将延长且不会掉落。</Paragraph></ListItem>
-<ListItem><Paragraph>没有被具有<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B2%BE%E5%87%86%E9%87%87%E9%9B%86" Margin="0,0,0,-8">精准采集</local:MyTextButton></Underline>的工具挖掘破坏时，<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>被破坏后会掉落1个<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3" Margin="0,0,0,-8">绿宝石</local:MyTextButton></Underline>和3-7点<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%8F%E9%AA%8C" Margin="0,0,0,-8">经验</local:MyTextButton></Underline>。</Paragraph></ListItem>
-<ListItem><Paragraph>被具有<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B2%BE%E5%87%86%E9%87%87%E9%9B%86" Margin="0,0,0,-8">精准采集</local:MyTextButton></Underline>的工具挖掘破坏时，<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>被破坏后会掉落自身。</Paragraph></ListItem>
-<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3%E7%9F%BF%E7%9F%B3" Margin="0,0,0,-8">绿宝石矿石</local:MyTextButton></Underline>可以被烧炼为<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%BF%E5%AE%9D%E7%9F%B3" Margin="0,0,0,-8">绿宝石</local:MyTextButton></Underline>，每烧炼一个会给予1点<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%8F%E9%AA%8C" Margin="0,0,0,-8">经验</local:MyTextButton></Underline>。</Paragraph></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%95%90" Margin="0,0,0,-8">镐</local:MyTextButton></Underline>的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%97%B6%E8%BF%90" Margin="0,0,0,-8">时运</local:MyTextButton></Underline>魔咒有概率使掉落数量翻倍。</Paragraph></ListItem>
+<ListItem><Paragraph>使用其他方法破坏<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%B0%87" Margin="0,0,0,-8">紫水晶簇</local:MyTextButton></Underline>只能获得2个<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>。</Paragraph></ListItem>
+<ListItem><Paragraph><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>也可以在<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%BF%9C%E5%8F%A4%E5%9F%8E%E5%B8%82" Margin="0,0,0,-8">远古城市</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%AF%95%E7%82%BC%E5%AF%86%E5%AE%A4" Margin="0,0,0,-8">试炼密室</local:MyTextButton></Underline>交叉口的箱子中找到。</Paragraph></ListItem>
+<ListItem><Paragraph>当<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%82%A6%E7%81%B5" Margin="0,0,0,-8">悦灵</local:MyTextButton></Underline>在跳舞时获得1个<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>，其所在的位置会生成另一只<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%82%A6%E7%81%B5" Margin="0,0,0,-8">悦灵</local:MyTextButton></Underline>，并发出爱心粒子和紫水晶音效。</Paragraph></ListItem>
+<ListItem><Paragraph>作为合成材料，<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E7%A2%8E%E7%89%87" Margin="0,0,0,-8">紫水晶碎片</local:MyTextButton></Underline>可用于合成<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%B4%AB%E6%B0%B4%E6%99%B6%E5%9D%97" Margin="0,0,0,-8">紫水晶块</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%A0%A1%E9%A2%91%E5%B9%BD%E5%8C%BF%E6%84%9F%E6%B5%8B%E4%BD%93" Margin="0,0,0,-8">校频幽匿感测体</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%9C%9B%E8%BF%9C%E9%95%9C" Margin="0,0,0,-8">望远镜</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%81%AE%E5%85%89%E7%8E%BB%E7%92%83" Margin="0,0,0,-8">遮光玻璃</local:MyTextButton></Underline>。</Paragraph></ListItem>
 </List>
 </FlowDocument>
 </FlowDocumentScrollViewer>
@@ -319,119 +318,32 @@ Mfn233                                       @ Github(Mfn233) 为主页提供最
                     Data="M4 2H2v12h2V4h10V2zm2 4h12v2H8v10H6zm4 4h12v12H10zm10 10v-8h-8v8z"/>
 <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="仿生猫梦见苦力怕" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
 </Grid>
-<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新: 2025-06-01" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+<TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新: 2025-07-24" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
 <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该页面" EventType="打开网页"
     EventData="{StaticResource WikiPage}" LogoScale="1.05" Logo="{StaticResource WikiIcon}" HorizontalAlignment="Left"/>
 </StackPanel>
 </local:MyCard>
     </TabItem>
 <TabItem Header="Minecraft官方博文 - 识海漫谈" Style="{StaticResource TabItemStyle}">
-<local:MyCard>
-<StackPanel Style="{StaticResource ContentStack}">
-<Border Style="{StaticResource HeadImageBorder}">
-<Border.Background>
-<ImageBrush ImageSource="https://www.helloimg.com/i/2025/04/21/68062e0edcfaf.jpg" Stretch="UniformToFill" />
-</Border.Background>
-<Image Source="https://www.helloimg.com/i/2025/04/21/68062e0edcfaf.jpg" Opacity="0" Stretch="Fill"/>
-</Border>
-<Border Style="{StaticResource TitleBorder}">
-<TextBlock Style="{StaticResource TitleBlock}" Text="末影人" />
-</Border><FlowDocumentScrollViewer>
-<FlowDocument>
-<Paragraph Style="{StaticResource H7}">Mob Menagerie: Enderman</Paragraph>
-<Paragraph Style="{StaticResource H2}">生物圈栏：末影人</Paragraph>
-<Paragraph Style="{StaticResource H7}">A tall dark stranger that doesn’t like being stared at.</Paragraph>
-<Paragraph Style="{StaticResource H5}">个子高、肤色深、讨厌被人盯着的怪人</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Quick – what are the top three weirdest mobs in Minecraft?</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">一秒内，你能想到《我的世界》三大奇怪的生物是哪些么？</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Here’s my list. Number three – the strider, happily wading around its lava pools. Number two – the mooshroom, an unholy hybrid of moo and shroom. But topping the list, at number one, is our mob of the month – the creepy, otherworldly, block-rearranging, Enderman.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">在我心中，排名第三的是喜欢到处“玩岩浆”的炽足兽，第二是由哞哞叫的牛和蘑菇“杂交”而成的奇异生物 —— 哞菇，第一则是我们的本月生物 —— 令人毛骨悚然、远离世俗喧嚣、喜欢乱挪方块的末影人。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Endermen were added to Minecraft alongside melons, glass panes and iron bars in the Adventure Update, released in September 2011.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">2011年11月，《我的世界》“冒险更新”版本发布，末影人被加入游戏，随之加入的还有西瓜、玻璃板和铁栏杆。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Originally they had green eyes and emitted smoke as they moved around, but those were changed to the now-familiar pink eyes and portal particles on release.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">起初，末影人有双绿色的眼睛，移动时周围会烟雾弥漫。后来，末影人迎来大变样，眼睛变成了粉红色，突然出现时，会出现传送门粒子。</Paragraph>
-<BlockUIContainer>
-<StackPanel Margin="0,4,0,4">
-<Image Style="{StaticResource InnerImage}" Source="https://www.helloimg.com/i/2025/04/21/68062e0da2e29.jpg"/>
+<local:MyCard Title="最新版本" CanSwap="False" IsSwaped="False" >
+<StackPanel Margin="8,38,8,15">
+<local:MyListItem Margin="10,1,10,1" ToolTip="最新博文，点击即可查看。"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="生物圈栏：末影人（最新博文）" Info="更新于2025-04-21，由 Glorydark（MineBBS）翻译。"
+    EventType="打开帮助" EventData="http://pclhomeplazaoss.lingyunawa.top:26995/d/Homepages/Ext1nguisher/h末影人.json" Type="Clickable" />
+<Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
+    HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史博文，点击即可查看。"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOff.png" Title="背包盘点：望远镜（历史博文）" Info="更新于2024-11-23，由 橄榄Chen（原MCBBS）翻译。"
+    EventType="打开帮助" EventData="http://pclhomeplazaoss.lingyunawa.top:26995/d/Homepages/Ext1nguisher/h望远镜.json" Type="Clickable" />
 </StackPanel>
-</BlockUIContainer>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Finding an Enderman should be easy. They’re the only mob that spawns naturally in all three of the game’s dimensions – the Overworld, the Nether, and the End. But actually they’re quite rare in the first two of those. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">末影人一点也不难找。它是主世界、下界、末地三个维度都会生成的唯一一种怪物。前两个维度中，末影人应该很少出现。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">My advice for finding one in the Overworld is to head somewhere where the terrain is relatively flat so you can see a good distance, then pillar up beyond the range of skeleton bows and wait for night time.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">要想在主世界找到末影人，建议去一些地形平坦的地方，这样能一目千里，再原地往上搭几格，骷髅便攻击不到你，然后静静等待夜晚到来即可。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver"> Once the sun sets, begin to look out in all directions. Eventually, you’ll spot one – shuffling around, perhaps with a block in its hands.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">夕阳西下，夜幕降临，便要开始眼观四方了。最后，你肯定能发现一只末影人 —— 它穿梭于地方之间，手里或许还拿着一个方块。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">But be careful with that crosshair. Endermen really don’t like it when you look directly at their face. If you do, they’ll start screaming and shaking, and as soon as you look away it’ll begin teleporting towards you and begin to attack. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">但要注意你屏幕上的十字准心，末影人可不会喜欢有人直勾勾地盯着它们的脸。你敢这样做，末影人便会抽泣，颤抖，随后朝你瞬移过来，向你发起攻击。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">They’ll also teleport in a couple of other situations. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">在其他一些情况下，末影人也会瞬移。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">This means that you’ll need a melee weapon to take one down. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">如果你将投掷物扔向末影人，它便会在投掷物击中的前一刻迅速躲开。所以，要想击杀末影人，必须用近战武器。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Also, Endermen don’t really like liquids or bright sunlight – if they come into contact with either, they’ll begin teleporting randomly, often ending up in caves below the surface where they lurk until it’s dark again. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">同时，末影人也不喜欢和液体接触，更不喜欢在明媚的阳光下逗留 —— 遇到以上任何一种情况，末影人便会传送到任意地点，最终会躲到地表下的洞穴内，直到黑夜降临，才会再次出现在地面。</Paragraph>
-<BlockUIContainer>
-<StackPanel Margin="0,4,0,4">
-<Image Style="{StaticResource InnerImage}" Source="https://www.helloimg.com/i/2025/04/21/68062e10eb1f6.png"/>
+</local:MyCard>
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史博文，点击即可查看。"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOff.png" Title="结构寻访：废弃矿井（历史博文）" Info="更新于2024-11-23，自译博文。"
+    EventType="打开帮助" EventData="http://pclhomeplazaoss.lingyunawa.top:26995/d/Homepages/Ext1nguisher/h废弃矿井.json" Type="Clickable" />
 </StackPanel>
-</BlockUIContainer>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">You don’t have to fight Endermen, you know. These strange, tall beings will happily ignore you if you ignore them and their habit of quietly moving blocks around from one place to another. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">众所周知，你完全不需要与末影人搏斗。你不看这位身材高挑的怪家伙，它压根不会盯上你，而是自顾自悄悄拿起一个方块运到另一处。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">But if you want to complete the game you will need to end a few, so here are a few useful things to know.</Paragraph>
-<Paragraph Margin="0,0" Foreground="black">但若想通关游戏的话，你可能要“亲密接触”一些末影人了，下面是一些实用提示：</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">First, Endermen hit hard – about twice as hard as a zombie. They also have twice the health of a zombie, meaning that you’ll want to be prepared before taking one on. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">第一，末影人攻击伤害可不低，大概有僵尸的两倍，血量也是僵尸的两倍。因此，与末影人斗智斗勇前，要准备充分。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Second, Endermen are tall enough that they won’t fit under a two-block high ceiling. You can often hide below a tree and attack one without it being able to hit back very effectively. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">第二，末影人个子高，进不去2格高的地方。通常，你可以躲在一棵树下，然后用你的武器反击，这样一点也不用担心末影人会反击了。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">Finally, when ended an Enderman, they will drop any block that they’re holding as an item, and will also sometimes drop an Ender pearl – a strange object that grants the holder the Endermen’s power of teleportation, as well as access to the End dimension. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">最后，当你击杀了末影人，地上会掉落一些它们手上拿着的方块，有时也会掉落一个末影珍珠。末影珍珠是一种奇异物品，能让玩家拥有末影人的瞬移能力，更能解锁末地维度。</Paragraph>
-<Paragraph Margin="0,0" FontSize="12" Foreground="silver">That’s where you’ll find the Ender Dragon – the closest thing that Minecraft has to a final boss. So get some practice in on the Endermen, and good luck – you’ll no doubt need it. </Paragraph>
-<Paragraph Margin="0,0" Foreground="black">在末地，你便会见到《我的世界》最终BOSS —— 末影龙。因此，记得多在末影人上做点功课，未来肯定会派上用场。祝你好运！</Paragraph>
-</FlowDocument>
-</FlowDocumentScrollViewer>
-
-<StackPanel Margin="0,0,0,20">
-<Grid VerticalAlignment="Center" Margin="0,10,20,0" HorizontalAlignment="Right">
-<Grid.ColumnDefinitions>
-<ColumnDefinition Width="64"/>
-<ColumnDefinition Width="*"/>
-<ColumnDefinition Width="64"/>
-<ColumnDefinition Width="*"/>
-</Grid.ColumnDefinitions>
-<Grid.RowDefinitions>
-<RowDefinition Height="42"/>
-<RowDefinition />
-</Grid.RowDefinitions>
-<Path Grid.Column="0" Margin="0,0" Height="28" Fill="{DynamicResource ColorBrush4}"
-                    Stretch="Uniform"
-                    Data="M640 416h256c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H480c-35.36 0-64-28.48-64-64V640h128c53.312 0 96-42.976 96-96V416zM64 128c0-35.36 28.48-64 64-64h416c35.36 0 64 28.48 64 64v416c0 35.36-28.48 64-64 64H128c-35.36 0-64-28.48-64-64V128z m128 276.256h46.72v-24.768h67.392V497.76h49.504V379.488h68.768v20.64h50.88V243.36H355.616v-34.368c0-10.08 1.376-18.784 4.16-26.112a10.56 10.56 0 0 0 1.344-4.16c0-0.896-3.2-1.792-9.6-2.72h-46.816v67.36H192v160.896z m46.72-122.368h67.392v60.48h-67.36V281.92z m185.664 60.48h-68.768V281.92h68.768v60.48z m203.84 488l19.264-53.632h100.384l19.264 53.632h54.976L732.736 576h-64.64L576 830.4h52.256z m33.024-96.256l37.12-108.608h1.376l34.368 108.608h-72.864zM896 320h-64a128 128 0 0 0-128-128v-64a192 192 0 0 1 192 192zM128 704h64a128 128 0 0 0 128 128v64a192 192 0 0 1-192-192z"/>
-<TextBlock Grid.Column="1" Text="(MineBBS)Glorydark" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-<Path Grid.Column="2" Margin="8,0" Height="28" Fill="{DynamicResource ColorBrush4}"
-                    Stretch="Uniform" HorizontalAlignment="Right"
-                    Data="M14 21v-3.075l5.525-5.5q.225-.225.5-.325t.55-.1q.3 0 .575.113t.5.337l.925.925q.2.225.313.5t.112.55t-.1.563t-.325.512l-5.5 5.5zM4 20v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13q.925 0 1.825.113t1.8.362L12 17.1V20zm16.575-4.6l.925-.975l-.925-.925l-.95.95zM12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12"/>
-<TextBlock HorizontalAlignment="Right" Grid.Column="3" Text="Duncan Geere" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
-<TextBlock Margin="0,2" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Text="最后更新: 2025-04-21" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
-<TextBlock Margin="0,2" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Text="源日期: 2025-04-07" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
-</Grid>
-<local:MyIconTextButton Text="访问原址" ToolTip="在 Minecraft 官网上查看该页面原文" EventType="打开网页" Margin="8"
-    EventData="https://www.minecraft.net/zh-hans/article/enderman" LogoScale="1.05" Logo="{StaticResource CreeperIcon}" HorizontalAlignment="Left"/>
-</StackPanel>
-
-<StackPanel Margin="16,0,23,20" VerticalAlignment="bottom">
-    <Grid>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*"/>
-        <ColumnDefinition Width="120"/>
-      </Grid.ColumnDefinitions>
-      <local:MyComboBox x:Name="jumpbox" Height="30" SelectedIndex="0">
-        <local:MyComboBoxItem Content="古迹废墟"/>
-        <local:MyComboBoxItem Content="废弃矿井"/>
-        <local:MyComboBoxItem Content="望远镜"/>
-      </local:MyComboBox>
-        <local:MyButton HorizontalAlignment="Center" Width="92"
-            Grid.Column="1" Text="打开→" EventType="打开帮助"
-            EventData="{Binding Path=Text,ElementName=jumpbox,StringFormat=http://pclhomeplazaoss.lingyunawa.top:26995/d/Homepages/Ext1nguisher/h{0}.json}"/>
-    </Grid>
-</StackPanel>
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史博文，点击即可查看。"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOff.png" Title="结构寻访：古迹废墟（历史博文）" Info="更新于2024-11-14，自译博文。"
+    EventType="打开帮助" EventData="http://pclhomeplazaoss.lingyunawa.top:26995/d/Homepages/Ext1nguisher/h古迹废墟.json" Type="Clickable" />
 </StackPanel>
 </local:MyCard>
 </TabItem>
@@ -453,10 +365,8 @@ Mfn233                                       @ Github(Mfn233) 为主页提供最
 <local:MyCard Title="最新版本" CanSwap="False" IsSwaped="False" >
 <StackPanel Margin="8,38,8,15">
 <local:MyListItem Margin="10,1,10,1" ToolTip="最新正式版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.5" Info="正式版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.5" Type="Clickable" /><local:MyListItem Margin="10,1,10,1" ToolTip="最新预发布版 点击查看该版本更新日志"
-	Logo="pack://application:,,,/images/Blocks/GrassPath.png" Title="最新预发布版 - 1.21.6-pre1" Info="预发布版"
-	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.6-pre1" Type="Clickable" />
+	Logo="pack://application:,,,/images/Blocks/Grass.png" Title="最新正式版 - 1.21.8" Info="正式版"
+	EventType="打开帮助" EventData="https://news.bugjump.net/VersionDetail.json?ver=1.21.8" Type="Clickable" />
 <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush5}"  Opacity="0.7" StrokeThickness="1.2"
      HorizontalAlignment="Center" Stretch="Fill" Margin="4,4"/>
 <local:MyListItem Margin="10,1" ToolTip="点击跳转到列表界面" LogoScale="1.04"
