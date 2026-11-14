@@ -1,0 +1,7 @@
+# 纯 XAML 卡片，其中的 ${...} 占位符会被展开
+components:
+ - $RawPresenter
+base: Frame
+filter:
+  file_exten:
+    - xaml

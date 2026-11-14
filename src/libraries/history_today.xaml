@@ -1,0 +1,6 @@
+<!-- 历史上的今天，条目由 modules/history.py 生成 -->
+<local:MyCard Margin="0,5" Title="历史上的今天" IsSwapped="True">
+    <StackPanel Margin="8,38,8,15">
+        ${$HistoryItems}
+    </StackPanel>
+</local:MyCard>

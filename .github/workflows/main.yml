@@ -19,10 +19,12 @@ jobs:
           version: "0.9.7"
 
       - name: Install dependencies
+        working-directory: src
         run: |
           uv sync
 
       - name: Run Python script
+        working-directory: src
         run: |
           uv run main.py
 
