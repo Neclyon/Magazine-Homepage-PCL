@@ -1,0 +1,4 @@
+# 透传一层，使卡片内的占位符得到展开
+components:
+ - PassThrough
+base: void

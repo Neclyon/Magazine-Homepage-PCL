@@ -1,0 +1,2 @@
+<!-- 最新版本新闻卡片，由 modules/news.py 从新闻 API 取得 -->
+${$NewsCard}

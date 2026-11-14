@@ -1,0 +1,4 @@
+# PCL2 杂志主页 —— HomepageBuilder 工程文件
+# 构建：uv run main.py（builder build --project Project.yml）
+default_page: main
+version: 0.14.9

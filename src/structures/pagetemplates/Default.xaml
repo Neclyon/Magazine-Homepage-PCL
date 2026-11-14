@@ -1,0 +1,12 @@
+<!-- Magazine Homepage for PCL made by Zhengyuan Huang. -->
+<!-- This file is distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license. -->
+
+<StackPanel Margin="0,-10,0,0"
+xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
+    <StackPanel.Resources>
+${styles}
+    </StackPanel.Resources>
+${content}
+</StackPanel>

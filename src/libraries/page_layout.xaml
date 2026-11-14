@@ -1,0 +1,17 @@
+<!-- 页面骨架：欢迎提示 + 标签页 + 页脚 -->
+<StackPanel>
+    <local:MyHint Margin="0,0,0,6" Theme="Blue" Text="📚 欢迎使用杂志主页 Next" />
+    <TabControl Style="{StaticResource TabControlStyle}" FontFamily="Microsoft YaHei UI" FontSize="17">
+        <TabItem Header="中文 MCW 特色条目" Style="{StaticResource TabItemStyle}">
+            ${$Card|wiki_featured}
+        </TabItem>
+        <TabItem Header="新闻专栏" Style="{StaticResource TabItemStyle}">
+            <StackPanel>
+                <local:MyHint Margin="0,0,0,6" Theme="Yellow" Text="⚠️ &quot;最新版本&quot; 板块每日中午 12:00 同步，请注意时效性。" />
+                ${$Card|news_card}
+                ${$Card|history_today}
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+    ${$Card|footer}
+</StackPanel>

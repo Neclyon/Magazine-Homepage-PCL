@@ -1,13 +1,41 @@
 # Megazine Homepage for PCL2
 
 ***A PCL2 Homepage -- Smart,modern and elegant.***
-![image](assets/image.png)
+![image](src/assets/image.png)
 
 ## What is included in this homepage:
 
-- Minecraft real-time updated news (@Light-Beacon);
-- [Minecraft Wiki](https://zh.minecraft.wiki) Excerpts;
-- Translated, Official Minecraft Blogs from [Minecraft.net](https://minecraft.net).
+- [Minecraft Wiki](https://zh.minecraft.wiki) 特色条目摘录;
+- Minecraft 版本新闻卡片（新闻数据来自 @Light-Beacon 的 API）;
+- 历史上的今天（数据来自百度百科）。
+
+## 工程结构
+
+本主页是一个 [HomepageBuilder](https://github.com/Light-Beacon/HomepageBuilder) 工程，由构建器从工程文件生成 `output/Custom.xaml`：
+
+```
+src/Project.yml             工程入口，指定默认页面
+src/pages/main.yml          页面由哪些卡片组成
+src/libraries/              卡片库，一张卡片一个文件
+src/resources/styles.xaml   全部样式资源
+src/structures/             页面模版、卡片模版与构件
+src/modules/                构建时抓取数据的脚本（Wiki / 新闻 / 历史上的今天）
+src/assets/                 图标路径与鸣谢文本，构建时由 modules/page.py 插入
+src/main.py                 构建入口，调用构建器并写版本号
+output/Custom.xaml          构建产物
+```
+
+卡片的写法见 [HomepageBuilder 文档](https://builder.docs.bugjump.net/)。
+
+## 本地构建
+
+```bash
+cd src
+uv sync
+uv run main.py
+```
+
+产物写入仓库根目录的 `output/Custom.xaml`，版本号写入 `output/Custom.xaml.ini`。也可以直接跑 `uv run builder build --project Project.yml --output-path ../output/Custom.xaml`，但版本号不会写进 ini。
 
 ## Usage:
 
@@ -34,10 +62,7 @@
 
 ## License
 
-[CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) for most of the Homepage.  
-
-[CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) for Minecraft Wiki Excerpt Contents.  
-
-[MIT License](https://mit-license.org/) for News card.  
+- `src/`：代码与工程文件，[Apache License 2.0](LICENSE)
+- `output/`：生成的主页产物，[CC BY-NC-SA 3.0](LICENSE)
 
 ***Thank you for choosing us!***

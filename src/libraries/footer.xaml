@@ -1,0 +1,51 @@
+<!-- 页脚：制作信息与功能按钮 -->
+    <local:MyCard Margin="0,10,0,14">
+        <Border BorderBrush="{DynamicResource ColorBrush2}" Margin="-0.6" CornerRadius="5" BorderThickness="0,0,0,10">
+            <StackPanel>
+                <Grid Margin="26,20,20,2">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,4">
+                            <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}">
+                                <Bold>PCL2 杂志主页</Bold>
+                            </TextBlock>
+                            <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="${$VersionID}" ToolTip="当前版本号(非git), 点击复制" EventType="复制文本" EventData="${$VersionID}"
+    LogoScale="1.1" Logo="${$Icon|version}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
+                            <TextBlock HorizontalAlignment="Left" Grid.Column="0" FontSize="13" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}">
+                                <Run>主页制作: 黄正源 / Neclyon</Run>
+                                <LineBreak/>
+                                <Run>更新时间: 每日中午 12:00（GitHub Actions）</Run>
+                                <LineBreak/>
+                                <Run>内容取自</Run>
+                                <Underline>
+                                    <local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki">中文 Minecraft Wiki</local:MyTextButton>
+                                </Underline>
+                                <Run>中“本周页面”板块以及 </Run>
+                                <Underline>
+                                    <local:MyTextButton EventType="打开网页" EventData="https://baike.baidu.com">百度百科</local:MyTextButton>
+                                </Underline>。
+                            </TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="-8,0,0,10">
+                            <local:MyIconTextButton HorizontalAlignment="Left" Text="GitHub" ToolTip="前往杂志主页 GitHub 页面" EventType="打开网页"
+    EventData="https://github.com/Neclyon/Magazine-Homepage-PCL"
+    LogoScale="1" Logo="${$Icon|github}"/>
+                            <local:MyIconTextButton Text="CC BY-NC-SA 3.0" ToolTip="无特殊声明本主页文字内容使用该授权协议" EventType="打开网页"
+    EventData="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+    LogoScale="1" Logo="${$Icon|cc}" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Right" >
+                        <local:MyIconTextButton HorizontalAlignment="Left" Text="反馈" ToolTip="反馈主页问题" EventType="打开网页"
+    EventData="https://github.com/Neclyon/Magazine-Homepage-PCL/issues/new"
+    LogoScale="1" Logo="${$Icon|feedback}"/>
+                        <local:MyIconTextButton HorizontalAlignment="Left" Text="刷新" ToolTip="刷新主页" EventType="刷新主页"
+    LogoScale="0.9" Logo="${$Icon|refresh}"/>
+                        <local:MyIconTextButton HorizontalAlignment="Left" Text="鸣谢" ToolTip="鸣谢人员名单及其联系方式" EventType="弹出窗口" EventData="${$Text|thanks}"
+    LogoScale="0.9" Logo="${$Icon|credits}"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </local:MyCard>
