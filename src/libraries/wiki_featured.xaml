@@ -10,7 +10,7 @@
         <Border Style="{StaticResource TitleBorder}">
             <TextBlock Style="{StaticResource TitleBlock}" Text="${$Wiki|topic}" />
         </Border>
-        <FlowDocumentScrollViewer>
+        <FlowDocumentScrollViewer FocusVisualStyle="{x:Null}">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H2}">
                     <Run FontSize="22" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" Text="${$Wiki|topic}"/>
