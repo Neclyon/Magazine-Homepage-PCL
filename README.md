@@ -2,6 +2,8 @@
  
 ***PCL 杂志主页——简洁、效率*** 
 
+![preview](./src/assets/preview.png)
+
 ## 内容:  
  
 - [中文 Minecraft Wiki](https://zh.minecraft.wiki) 特色条目摘录； 
