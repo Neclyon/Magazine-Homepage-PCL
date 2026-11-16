@@ -29,27 +29,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             <Setter Property="TextAlignment" Value="Left" />
         </Style>
         <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style  TargetType="Border" x:Key="HeadImageBorder">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="BorderThickness" Value="4" />
-            <Setter Property="VerticalAlignment" Value="Top" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
-            <Setter Property="CornerRadius" Value="7" />
-            <Setter Property="MaxHeight" Value="140" />
-        </Style>
-        <Style  TargetType="Paragraph" x:Key="H2">
-            <Setter Property="FontSize" Value="22" />
-            <Setter Property="Margin" Value="0,10,0,5" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-        </Style>
-        <Style  TargetType="Paragraph" x:Key="H3">
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="Margin" Value="0,5,0,5" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-        </Style>
-        <Style  TargetType="Border" x:Key="TitleBorder">
+<Style  TargetType="Border" x:Key="TitleBorder">
             <Setter Property="Margin" Value="0,-20,-1,10" />
             <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
             <Setter Property="Width" Value="170" />
@@ -57,6 +37,15 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             <Setter Property="CornerRadius" Value="7" />
             <Setter Property="BorderThickness" Value="0,0,0,2" />
             <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
+        </Style>
+        <Style  TargetType="StackPanel" x:Key="ContentStack">
+            <Setter Property="Margin" Value="20,20,20,20" />
+        </Style>
+        <Style  TargetType="Paragraph" x:Key="H3">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
         </Style>
         <Style  TargetType="TextBlock" x:Key="TitleBlock">
             <Setter Property="HorizontalAlignment" Value="Center" />
@@ -68,71 +57,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             <Setter Property="FontSize" Value="18" />
         </Style>
 
-<Style  x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
-            <Setter Property="Padding" Value="2" />
-            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-            <Setter Property="HorizontalContentAlignment" Value="Center" />
-            <Setter Property="VerticalContentAlignment" Value="Center" />
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="BorderBrush" Value="#FFACACAC" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type TabControl}">
-                        <Grid x:Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition x:Name="ColumnDefinition0" />
-                                <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition x:Name="RowDefinition0" Height="Auto" />
-                                <RowDefinition x:Name="RowDefinition1" Height="*" />
-                            </Grid.RowDefinitions>
-                            <UniformGrid x:Name="HeaderPanel" Rows="1" Background="Transparent" Grid.Column="0" IsItemsHost="True" Margin="0" Grid.Row="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
-                            <Line X1="0" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" Stroke="White" StrokeThickness="0.1" VerticalAlignment="Bottom" Margin="0 0 0 1" SnapsToDevicePixels="True" />
-                            <Border x:Name="ContentPanel" BorderBrush="{DynamicResource ColorBrush2}" BorderThickness="0" Background="Transparent" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" CornerRadius="7">
-                                <ContentPresenter x:Name="PART_SelectedContentHost" ContentTemplate="{TemplateBinding SelectedContentTemplate}" Content="{TemplateBinding SelectedContent}" ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" ContentSource="SelectedContent" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
-                            </Border>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="TabStripPlacement" Value="Bottom">
-                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="1" />
-                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
-                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
-                                <Setter Property="Height" TargetName="RowDefinition1" Value="Auto" />
-                            </Trigger>
-                            <Trigger Property="TabStripPlacement" Value="Left">
-                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0" />
-                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
-                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="0" />
-                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="1" />
-                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto" />
-                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="*" />
-                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
-                                <Setter Property="Height" TargetName="RowDefinition1" Value="0" />
-                            </Trigger>
-                            <Trigger Property="TabStripPlacement" Value="Right">
-                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0" />
-                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
-                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="1" />
-                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="0" />
-                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="*" />
-                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="Auto" />
-                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
-                                <Setter Property="Height" TargetName="RowDefinition1" Value="0" />
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style  TargetType="StackPanel" x:Key="ContentStack">
-            <Setter Property="Margin" Value="20,20,20,20" />
-        </Style>
-        <Style  x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
+<Style  x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
             <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
             <Setter Property="Background" Value="Transparent" />
@@ -199,6 +124,81 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style  x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="#FFACACAC" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid x:Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Name="ColumnDefinition0" />
+                                <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition x:Name="RowDefinition0" Height="Auto" />
+                                <RowDefinition x:Name="RowDefinition1" Height="*" />
+                            </Grid.RowDefinitions>
+                            <UniformGrid x:Name="HeaderPanel" Rows="1" Background="Transparent" Grid.Column="0" IsItemsHost="True" Margin="0" Grid.Row="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
+                            <Line X1="0" X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" Stroke="White" StrokeThickness="0.1" VerticalAlignment="Bottom" Margin="0 0 0 1" SnapsToDevicePixels="True" />
+                            <Border x:Name="ContentPanel" BorderBrush="{DynamicResource ColorBrush2}" BorderThickness="0" Background="Transparent" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" CornerRadius="7">
+                                <ContentPresenter x:Name="PART_SelectedContentHost" ContentTemplate="{TemplateBinding SelectedContentTemplate}" Content="{TemplateBinding SelectedContent}" ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" ContentSource="SelectedContent" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="TabStripPlacement" Value="Bottom">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="1" />
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="Auto" />
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Left">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0" />
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
+                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="0" />
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="1" />
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="Auto" />
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="*" />
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0" />
+                            </Trigger>
+                            <Trigger Property="TabStripPlacement" Value="Right">
+                                <Setter Property="Grid.Row" TargetName="HeaderPanel" Value="0" />
+                                <Setter Property="Grid.Row" TargetName="ContentPanel" Value="0" />
+                                <Setter Property="Grid.Column" TargetName="HeaderPanel" Value="1" />
+                                <Setter Property="Grid.Column" TargetName="ContentPanel" Value="0" />
+                                <Setter Property="Width" TargetName="ColumnDefinition0" Value="*" />
+                                <Setter Property="Width" TargetName="ColumnDefinition1" Value="Auto" />
+                                <Setter Property="Height" TargetName="RowDefinition0" Value="*" />
+                                <Setter Property="Height" TargetName="RowDefinition1" Value="0" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="TextElement.Foreground" TargetName="templateRoot" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style  TargetType="Paragraph" x:Key="H2">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Margin" Value="0,10,0,5" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+        </Style>
+        <Style  TargetType="Border" x:Key="HeadImageBorder">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}" />
+            <Setter Property="CornerRadius" Value="7" />
+            <Setter Property="MaxHeight" Value="140" />
+        </Style>
         
     </StackPanel.Resources>
 <!-- 页面骨架：欢迎提示 + 标签页 + 页脚 -->
@@ -211,33 +211,33 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     <StackPanel Style="{StaticResource ContentStack}">
         <Border Style="{StaticResource HeadImageBorder}">
             <Border.Background>
-                <ImageBrush ImageSource="https://zh.minecraft.wiki/images/thumb/Dappled_forest_shelf_mushroom.png/350px-Dappled_forest_shelf_mushroom.png?db210" Stretch="UniformToFill" />
+                <ImageBrush ImageSource="https://zh.minecraft.wiki/images/thumb/Dappled_Forest.png/350px-Dappled_Forest.png?3b9b1" Stretch="UniformToFill" />
             </Border.Background>
-            <Image Source="https://zh.minecraft.wiki/images/thumb/Dappled_forest_shelf_mushroom.png/350px-Dappled_forest_shelf_mushroom.png?db210" Opacity="0" Stretch="Fill"/>
+            <Image Source="https://zh.minecraft.wiki/images/thumb/Dappled_Forest.png/350px-Dappled_Forest.png?3b9b1" Opacity="0" Stretch="Fill"/>
         </Border>
         <Border Style="{StaticResource TitleBorder}">
-            <TextBlock Style="{StaticResource TitleBlock}" Text="层孔菇" />
+            <TextBlock Style="{StaticResource TitleBlock}" Text="斑驳森林" />
         </Border>
         <FlowDocumentScrollViewer FocusVisualStyle="{x:Null}">
             <FlowDocument>
                 <Paragraph Style="{StaticResource H2}">
-                    <Run FontSize="22" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" Text="层孔菇"/>
+                    <Run FontSize="22" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" Text="斑驳森林"/>
                 </Paragraph>
                 <List>
-                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>是一种自然生成于杨树树干上的植物方块，具有弹性。</Paragraph></ListItem>
+                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>是一种以杨树为主要树木的森林类<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%94%9F%E7%89%A9%E7%BE%A4%E7%B3%BB" Margin="0,0,0,-8">生物群系</local:MyTextButton></Underline>。</Paragraph></ListItem>
                 </List>
                 <Paragraph Style="{StaticResource H3}">合成 &amp; 生成</Paragraph>
                 <List>
-                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>会自然生成在<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>中的杨树及倒下的杨树上，自然生成的个数一般在2到3个之间。</Paragraph></ListItem>
+                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>主要由杨树和红灌木构成，杨树极为茂密，几乎遮天蔽日。</Paragraph></ListItem>
                 </List>
                 <Paragraph Style="{StaticResource H3}">特性 &amp; 用途</Paragraph>
                 <List>
-                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">杨树树苗长成的杨树树干上也有概率生成<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>。</Paragraph></ListItem>
-<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>会弹起掉落在其上方的生物和粒子。</Paragraph></ListItem>
-<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">物品实体仅受到物理弹跳，不会播放弹跳音效。</Paragraph></ListItem>
-<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>的弹性碰撞系数为0.75，与<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%BA%8A" Margin="0,0,0,-8">床</local:MyTextButton></Underline>相同。</Paragraph></ListItem>
-<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>会减免50%的摔落伤害，与弹跳是否触发无关。</Paragraph></ListItem>
-<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">作为合成材料，<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>可用于合成<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%98%91%E8%8F%87%E7%85%B2" Margin="0,0,0,-8">蘑菇煲</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%85%94%E8%82%89%E7%85%B2" Margin="0,0,0,-8">兔肉煲</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%B0%9C%E4%B9%8B%E7%82%96%E8%8F%9C" Margin="0,0,0,-8">谜之炖菜</local:MyTextButton></Underline>。</Paragraph></ListItem>
+                    <ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">倒下的杨树非常常见，其上会生成<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" Margin="0,0,0,-8">层孔菇</local:MyTextButton></Underline>。</Paragraph></ListItem>
+<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E4%BA%91%E6%9D%89" Margin="0,0,0,-8">云杉</local:MyTextButton></Underline>也会在这里生成，但非常稀疏。</Paragraph></ListItem>
+<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>的地表覆盖着<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%8D%89%E6%96%B9%E5%9D%97" Margin="0,0,0,-8">草方块</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%A0%82%E5%9C%9F" Margin="0,0,0,-8">砂土</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%A3%95%E8%89%B2%E8%98%91%E8%8F%87" Margin="0,0,0,-8">棕色蘑菇</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%9E%AF%E5%8F%B6%E5%A0%86" Margin="0,0,0,-8">枯叶堆</local:MyTextButton></Underline>。</Paragraph></ListItem>
+<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}"><Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>的环境颜色呈现橙红色而不是绿色。</Paragraph></ListItem>
+<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">与多数主世界<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%94%9F%E7%89%A9%E7%BE%A4%E7%B3%BB" Margin="0,0,0,-8">生物群系</local:MyTextButton></Underline>不同，<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%92%B2%E5%85%AC%E8%8B%B1" Margin="0,0,0,-8">蒲公英</local:MyTextButton></Underline>[仅<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/Java%E7%89%88" Margin="0,0,0,-8">Java版</local:MyTextButton></Underline>]和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E8%99%9E%E7%BE%8E%E4%BA%BA" Margin="0,0,0,-8">虞美人</local:MyTextButton></Underline>无法在<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>通过使用<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%AA%A8%E7%B2%89" Margin="0,0,0,-8">骨粉</local:MyTextButton></Underline>生成。</Paragraph></ListItem>
+<ListItem><Paragraph Foreground="{DynamicResource ColorBrush1}">在<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" Margin="0,0,0,-8">斑驳森林</local:MyTextButton></Underline>生成的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%8C%AA" Margin="0,0,0,-8">猪</local:MyTextButton></Underline>、<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%89%9B" Margin="0,0,0,-8">牛</local:MyTextButton></Underline>和<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E9%B8%A1" Margin="0,0,0,-8">鸡</local:MyTextButton></Underline>是寒带变种，生成的<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%BB%B5%E7%BE%8A" Margin="0,0,0,-8">绵羊</local:MyTextButton></Underline>毛色遵守寒带<Underline><local:MyTextButton EventType="打开网页" EventData="https://zh.minecraft.wiki/w/%E7%94%9F%E7%89%A9%E7%BE%A4%E7%B3%BB" Margin="0,0,0,-8">生物群系</local:MyTextButton></Underline>的概率。</Paragraph></ListItem>
                 </List>
             </FlowDocument>
         </FlowDocumentScrollViewer>
@@ -251,9 +251,9 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
                 Data="M4 2H2v12h2V4h10V2zm2 4h12v2H8v10H6zm4 4h12v12H10zm10 10v-8h-8v8z"/>
             <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="正源 Neclyon" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
         </Grid>
-        <TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-11-15" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+        <TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-11-16" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
         <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该页面" EventType="打开网页"
-            EventData="https://zh.minecraft.wiki/w/%E5%B1%82%E5%AD%94%E8%8F%87" LogoScale="1.05" Logo="M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z" HorizontalAlignment="Left"/>
+            EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" LogoScale="1.05" Logo="M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z" HorizontalAlignment="Left"/>
     </StackPanel>
 </local:MyCard>
 
@@ -283,44 +283,47 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
 <local:MyCard Margin="0,5" Title="历史上的今天" CanSwap="True" IsSwapped="False">
     <StackPanel Margin="8,38,8,15">
         <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="德国天文学家约翰内斯·开普勒逝世" Info="约翰尼斯·开普勒（德语：Johannes Kepler），德国天文学家、数学家与占星家，1572年1月6日生于神圣罗马帝国符腾堡（现属德国）的威尔德斯达特镇，1630年11月15日因病卒于巴伐利亚公国雷根斯堡，享年58岁。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%E5%B0%BC%E6%96%AF%C2%B7%E5%BC%80%E6%99%AE%E5%8B%92" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="罗马帝国第二任皇帝提庇留出生" Info="罗马帝国[前27年—395年(乙未年)]，正式名称为元老院与罗马人民，中国史书称为大秦、拂菻，是古罗马文明的一个阶段。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%BD%97%E9%A9%AC%E5%B8%9D%E5%9B%BD/3059" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="“恒星天文学之父”威廉·赫歇尔出生" Info="弗里德里希·威廉·赫歇尔（Friedrich Wilhelm Herschel，1738年11月15日—1822年8月25日），英国天文学家，古典作曲家，音乐家。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%A8%81%E5%BB%89%C2%B7%E8%B5%AB%E6%AD%87%E5%B0%94" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="唐岛之战爆发" Info="唐岛之战，又称唐岛海战、胶西海战、唐岛湾海战或黄海奔袭战，是南宋绍兴三十一年（1161）宋金双方在黄海海面进行的一次海上决战。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%94%90%E5%B2%9B%E4%B9%8B%E6%88%98" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国南北战争，威廉·谢尔曼向大海进军" Info="南北战争（American Civil War）即美国内战，是美国历史上唯一一次内战，参战双方为北方美利坚合众国和南方的美利坚联盟国。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%8D%97%E5%8C%97%E6%88%98%E4%BA%89" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="南宋皇帝宋理宗赵昀逝世" Info="赵昀，南宋皇室宗亲，赵匡胤之子赵德昭的九世孙。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%B5%B5%E6%98%80/33975" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国女画家乔治亚·欧姬芙出生" Info="乔治亚·欧姬芙，是一位美国艺术家，被列为20世纪的艺术大师之一。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%B9%94%E6%B2%BB%E4%BA%9A%C2%B7%E6%AC%A7%E5%A7%AC%E8%8A%99" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="英格兰国王亨利三世逝世" Info="亨利三世（英文：Henry III，1207年10月1日－1272年11月16日），金雀花王朝的第四位英格兰国王（1216年—1272年在位）。虽然他的在位时间相当长，但他是英格兰历史上最无名的国王之一。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%BA%A8%E5%88%A9%E4%B8%89%E4%B8%96/14212" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="德国陆军元帅埃尔温·隆美尔出生" Info="埃尔温·隆美尔（德语：Erwin Rommel，1891年11月15日—1944年10月14日），纳粹德国陆军元帅，军事家。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%9F%83%E5%B0%94%E6%B8%A9%C2%B7%E9%9A%86%E7%BE%8E%E5%B0%94" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="军事理论家克劳塞维茨逝世" Info="卡尔·菲利普·戈特弗里德·冯·克劳塞维茨（1780—1831年），普鲁士军事理论家和军事历史学家，普鲁士军队少将。1792年，参加了普鲁士军队。1795年晋升为军官，并自修了战略学、战术学和军事历史学。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%85%8B%E5%8A%B3%E5%A1%9E%E7%BB%B4%E8%8C%A8" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="清朝政治家慈禧太后逝世" Info="叶赫那拉氏（1835年11月29日－1908年11月15日），一般根据其徽号简称为“慈禧”“慈禧太后” ，又有“西太后”“老佛爷” 等称呼。中国晚清时期重要政治人物。咸丰帝的妃嫔，同治帝的生母。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E6%85%88%E7%A6%A7" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="夏威夷王国的君主卡拉卡瓦出生" Info="卡拉卡瓦一世，又被尊称为快乐的君主，是卡帕科雅和科欧侯咖洛的长子，夏威夷王国第七位国王（1874年—1891年在位）。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%8D%A1%E6%8B%89%E5%8D%A1%E7%93%A6" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="香港政界人物陈婉娴出生" Info="陈婉娴，SBS，JP（CHAN Yuen-han，1946年11月15日－）广东宝安人，香港黄大仙区议会（龙上选区）议员，前香港立法会议员，选举组别为九龙东（地方选区）。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E9%99%88%E5%A9%89%E5%A8%B4" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="约翰·弗莱明发明真空管" Info="约翰·安布罗斯·弗莱明 （John Ambrose Fleming ）（1864年11月29日-1945年4月18日），英国电机工程师、物理学家。以在发现右手定则、发明二极管、真空管而闻名。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E5%AE%89%E5%B8%83%E7%BD%97%E6%96%AF%C2%B7%E5%BC%97%E8%8E%B1%E6%98%8E" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国英特尔公司发布了微处理器4004" Info="英特尔公司是全球最大的半导体芯片制造商，它成立于1968年，具有46年产品创新和市场领导的历史。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%8B%B1%E7%89%B9%E5%B0%94" Type="Clickable" />
+    Logo="http://baike.bdimg.com/cms/rc/r/image/2014-08-31/ca8bfddd183ebe2f798753381b0711fb_80_80.jpg" Title="中国著名学者、教育家屈伯川出生" Info="屈伯川是中国著名学者、教育家。他是大连理工大学的创建人。他参与创建了大连大学，于1950年被取消，大连工学院成立，他任院长兼党组书记。1988年，大连工学院更名为大连理工大学。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%B1%88%E4%BC%AF%E5%B7%9D" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="北塞浦路斯土耳其共和国成立" Info="土耳其共和国，简称土耳其，是一个横跨亚欧大陆两洲的国家，北临黑海，南临地中海，东南与叙利亚、伊拉克接壤，西临爱琴海，与希腊以及保加利亚接壤，东部与格鲁吉亚、亚美尼亚、阿塞拜疆和伊朗接壤。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%9C%9F%E8%80%B3%E5%85%B6" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="葡萄牙作家若泽·萨拉马戈出生" Info="若泽·萨拉马戈（José Saramago，1922年11月16日～2010年6月18日），葡萄牙作家，主要作品有《修道院纪事》《失明症漫记》《复明症漫记》等。其作品以独特的长句结构和极简标点（仅用逗号、句号）著称，叙述与对话界限模糊，需通过朗读把握节奏。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%8B%A5%E6%B3%BD%C2%B7%E8%90%A8%E6%8B%89%E9%A9%AC%E6%88%88" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="胡锦涛当选中国共产党中央委员会总书记" Info="胡锦涛（1942.12—），男，安徽绩溪人。中国共产党党员。中国共产党、中华人民共和国领导人。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%83%A1%E9%94%A6%E6%B6%9B" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国半导体工程师吉恩·阿姆达尔出生" Info="吉恩·阿姆达尔被认为是有史以来最伟大的计算机设计师之一。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%90%89%E6%81%A9%C2%B7%E9%98%BF%E5%A7%86%E8%BE%BE%E5%B0%94" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="柏林奥运会男子马拉松金牌得主孙基祯逝世" Info="孙基祯（1912年～2002年11月15日），生于朝鲜新义州，朝鲜日治时期的男子马拉松运动员。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%AD%99%E5%9F%BA%E7%A5%AF" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="中国运载火箭技术研究院在北京成立" Info="中国运载火箭技术研究院（简称“航天一院”）始建于1957年11月16日，隶属于中国航天科技集团有限公司，是中国航天事业的发祥地、中国航天第一个研制基地，是中国历史最久、规模最大的导弹武器和运载火箭研制、试验和生产基地。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E8%BF%90%E8%BD%BD%E7%81%AB%E7%AE%AD%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="http://baike.bdimg.com/cms/rc/r/image/2014-08-31/9c2ca9bc2c2f6142c3a87a1a29552c2a_80_80.jpg" Title="美籍华裔结构工程师林同炎逝世" Info="林同炎是中国知名结构工程师。他首开预力混凝土工程标准化的先河，他的住宅是世界上第一个使用预应力混凝土的住宅结构。美国土木工程师学会将 “预应力混凝土奖”改名为“林同炎奖”。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E6%9E%97%E5%90%8C%E7%82%8E" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国电影演员克拉克·盖博逝世" Info="克拉克·盖博1901年2月1日出生于美国俄亥俄州，美国电影男演员。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%85%8B%E6%8B%89%E5%85%8B%C2%B7%E7%9B%96%E5%8D%9A" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="中国体育界元老荣高棠逝世" Info="荣高棠（1912 - 2006.11.15），原名荣千祥，河北省霸县人，新中国体育战线杰出的老领导人。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%8D%A3%E9%AB%98%E6%A3%A0" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="联合国教科文组织通过《世界遗产公约》" Info="保护世界文化和自然遗产公约（Convention Concerning the Protection of the World Cultural and Natural Heritage），简称世界遗产公约，国际间的公约之一。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%BF%9D%E6%8A%A4%E4%B8%96%E7%95%8C%E6%96%87%E5%8C%96%E5%92%8C%E8%87%AA%E7%84%B6%E9%81%97%E4%BA%A7%E5%85%AC%E7%BA%A6" Type="Clickable" />
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="《联合国海洋法公约》开始生效" Info="联合国海洋法公约（United Nations Convention on the Law of the Sea）是1982年第三次联合国海洋法会议通过的综合性国际公约，1994年11月16日生效。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%81%94%E5%90%88%E5%9B%BD%E6%B5%B7%E6%B4%8B%E6%B3%95%E5%85%AC%E7%BA%A6" Type="Clickable" />
 
     </StackPanel>
 </local:MyCard>
@@ -339,7 +342,7 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
                             <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}">
                                 <Bold>PCL2 杂志主页</Bold>
                             </TextBlock>
-                            <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="261115:8925482" ToolTip="当前版本号(非git), 点击复制" EventType="复制文本" EventData="261115:8925482"
+                            <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="261116:676bdeb" ToolTip="当前版本号(非git), 点击复制" EventType="复制文本" EventData="261116:676bdeb"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
