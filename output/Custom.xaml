@@ -37,30 +37,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
             <Setter Property="CornerRadius" Value="7" />
             <Setter Property="MaxHeight" Value="140" />
         </Style>
-        <Style  TargetType="StackPanel" x:Key="ContentStack">
-            <Setter Property="Margin" Value="20,20,20,20" />
-        </Style>
-        <Style  TargetType="Paragraph" x:Key="H2">
-            <Setter Property="FontSize" Value="22" />
-            <Setter Property="Margin" Value="0,10,0,5" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
-        </Style>
-        <Style  TargetType="Border" x:Key="TitleBorder">
-            <Setter Property="Margin" Value="0,-20,-1,10" />
-            <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
-            <Setter Property="Width" Value="170" />
-            <Setter Property="Height" Value="30" />
-            <Setter Property="CornerRadius" Value="7" />
-            <Setter Property="BorderThickness" Value="0,0,0,2" />
-            <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
-        </Style>
-        <Style  TargetType="Paragraph" x:Key="H3">
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="Margin" Value="0,5,0,5" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
-        </Style>
         <Style  x:Key="TabItemStyle" TargetType="{x:Type TabItem}">
             <Setter Property="Foreground" Value="{DynamicResource ColorBrush1}" />
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -128,17 +104,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style  TargetType="TextBlock" x:Key="TitleBlock">
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="TextAlignment" Value="Center" />
-            <Setter Property="VerticalAlignment" Value="Center" />
-            <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
-            <Setter Property="Width" Value="180" />
-            <Setter Property="TextWrapping" Value="Wrap" />
-            <Setter Property="FontSize" Value="18" />
-        </Style>
-
-<Style  x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+        <Style  x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
             <Setter Property="Padding" Value="2" />
             <Setter Property="FocusVisualStyle" Value="{x:Null}" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -199,6 +165,40 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style  TargetType="Paragraph" x:Key="H3">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Margin" Value="0,5,0,5" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush4}" />
+        </Style>
+        <Style  TargetType="Paragraph" x:Key="H2">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Margin" Value="0,10,0,5" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush3}" />
+        </Style>
+        <Style  TargetType="Border" x:Key="TitleBorder">
+            <Setter Property="Margin" Value="0,-20,-1,10" />
+            <Setter Property="Background" Value="{DynamicResource ColorBrush3}" />
+            <Setter Property="Width" Value="170" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="CornerRadius" Value="7" />
+            <Setter Property="BorderThickness" Value="0,0,0,2" />
+            <Setter Property="BorderBrush" Value="{DynamicResource ColorBrush2}" />
+        </Style>
+        <Style  TargetType="TextBlock" x:Key="TitleBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Foreground" Value="{DynamicResource ColorBrush7}" />
+            <Setter Property="Width" Value="180" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+
+<Style  TargetType="StackPanel" x:Key="ContentStack">
+            <Setter Property="Margin" Value="20,20,20,20" />
+        </Style>
         
     </StackPanel.Resources>
 <!-- 页面骨架：欢迎提示 + 标签页 + 页脚 -->
@@ -251,7 +251,7 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
                 Data="M4 2H2v12h2V4h10V2zm2 4h12v2H8v10H6zm4 4h12v12H10zm10 10v-8h-8v8z"/>
             <TextBlock HorizontalAlignment="Right" Grid.Column="1" Text="正源 Neclyon" FontSize="14" VerticalAlignment="Center" Foreground="{DynamicResource ColorBrush4}"/>
         </Grid>
-        <TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-11-17" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
+        <TextBlock Margin="0,2" Grid.Column="1" HorizontalAlignment="Right" Text="最后更新：2026-11-18" FontSize="12" Foreground="{DynamicResource ColorBrush4}"/>
         <local:MyIconTextButton Text="WIKI" ToolTip="在 Minecraft Wiki 上查看该页面" EventType="打开网页"
             EventData="https://zh.minecraft.wiki/w/%E6%96%91%E9%A9%B3%E6%A3%AE%E6%9E%97" LogoScale="1.05" Logo="M172.61,196.65h31a7.69,7.69,0,0,1,7.62,6.65l11.19,80.95c2.58,20.09,5.16,40.18,7.73,60.79h1c3.61-20.61,7.47-41,11.34-60.79l18.23-81.58a7.7,7.7,0,0,1,7.52-6h26.58a7.7,7.7,0,0,1,7.51,6l18.48,81.6c3.86,19.57,7.21,40.18,11.07,60.79h1.29c2.32-20.61,4.9-41,7.22-60.79l11.67-81a7.7,7.7,0,0,1,7.62-6.6h27.72a7.7,7.7,0,0,1,7.59,9L364.41,382.2a7.69,7.69,0,0,1-7.58,6.38H311.61a7.7,7.7,0,0,1-7.54-6.14l-16-77.33c-3.09-14.68-5.67-30.14-7.47-44.57h-1c-2.58,14.43-4.9,29.89-7.73,44.57L256.34,382.4a7.7,7.7,0,0,1-7.54,6.18H204.6a7.69,7.69,0,0,1-7.58-6.32L165,205.72A7.71,7.71,0,0,1,172.61,196.65ZM286.87,507.39,159.71,455.25v22.82L97.54,451.18v-23.3l-89-2,9.54-119.29H44.78V291.24L31.45,280.81V247l14.09-4.23L45,227.13,63.33,220V207.1l5.51-2v-16.2l15.65-4.93V167.63l24.06-11.81,1.65-21.95,4.94-1.72-2-1V95.6h13V89.45l27.56-14.79L169,84.43,185.79,76l21.47,15.34,8.1,1v7.91h6.51l60.65-30.56,8,3.49,17-12.08L324,71l.12-2.19,39.15-22,18.06,12.53h26.37l3.79-1.62,36.38,27.4v28.77l16.81,8.15V149l6.08,3V164l10.15,5.51v11.32h9v11.52l1,0c1.54,0,3.44.08,5.91,0l15.13-.13V212.7h9.28v49.71h-5.8v36.1l-16,9h56l6.78,119.85-116.84-1.4Zm-157.16-85.7h27.23l128.51,52.7,152.82-78.54,92.15,1.1-3.36-59.47H456.67V325.89h-5.8v-40l22.37,1.81L485.36,281v-.86h-7.24V268.5h-7V236.33l-11.31,8.61V210.82h-9V187.35l-10.15-5.51V170.59l-11.59-5.79V138.2l-38.25-18.53,26.95-17.27v-2.29l-10.59-8-24.49,10.41V89.37H371.9l-10.35-7.18-8.38,4.7-.6,11.32-22.31,11.61-21.4-12.9L294,107.45l-10.58-4.63L192,148.87V130.24h-6.67V119l-1-.12V121l-28.12,4v.58h-7.1L151.49,150l-5.17-.37.11,3.38-1.27.44,14.7,10.59-45.37,22.26V206l-15.65,4.93V226l-5.51,2v12.57l-17.6,6.81.61,17.43-12,3.61,10.46,8.18v1.59h11.6v24l43.44,34.42h-84l-4.8,60,86.54,1.93v32.93l2.17.94ZM476.3,232.41h5.58v-4.25Z" HorizontalAlignment="Left"/>
     </StackPanel>
@@ -283,41 +283,50 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
 <local:MyCard Margin="0,5" Title="历史上的今天" CanSwap="True" IsSwapped="False">
     <StackPanel Margin="8,38,8,15">
         <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="清朝摄政王多尔衮出生" Info="爱新觉罗·多尔衮（1612年11月17日—1650年12月31日），满族，出生于赫图阿拉（今辽宁新宾老城）。努尔哈赤第十四子，皇太极之弟。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%88%B1%E6%96%B0%E8%A7%89%E7%BD%97%C2%B7%E5%A4%9A%E5%B0%94%E8%A1%AE" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="卫国君主卫宣公逝世" Info="卫宣公，姬姓，卫氏，名晋，卫庄公之子，卫桓公之弟，春秋时期卫国第十五任国君，前718年—前700年在位。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%8D%AB%E5%AE%A3%E5%85%AC" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="隆科多被以大罪五十永远禁锢" Info="佟佳·隆科多（？~1728年），男，字竹筠，满洲镶黄旗人，清圣祖孝懿仁皇后之弟，佟国维的第三子，清朝康熙、雍正时期重臣。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%BD%9F%E4%BD%B3%C2%B7%E9%9A%86%E7%A7%91%E5%A4%9A" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="吐蕃军入长安" Info="吐（tǔ）蕃（bō ），是由古代藏族在青藏高原建立的政权，自松赞干布至朗达玛传位九代，延续两百多年（公元633年—842年）。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%90%90%E8%95%83" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="法国君王路易十八出生" Info="路易十八（1755年11月17日－1824年9月16日），法国国王（在位1814年－1824年），法国波旁王朝复辟后的第一个国王。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%B7%AF%E6%98%93%E5%8D%81%E5%85%AB" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="司马光初进读通志，赐名《资治通鉴》" Info="《资治通鉴》，简称“通鉴”，是北宋司马光主编的一部多卷本编年体史书，共294卷，历时19年完成。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%B5%84%E6%B2%BB%E9%80%9A%E9%89%B4" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="根据《南京条约》，上海开埠" Info="《南京条约》又称《江宁条约》，是中国近代史上与外国签订的第一个不平等条约，是中国第一个丧权辱国的条约。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E6%9D%A1%E7%BA%A6" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="南宋主和派主要代表人物秦桧逝世" Info="秦桧(1090年－1155年)，字会之，汉族，宋朝江宁府(今江苏南京)人。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%A7%A6%E6%A1%A7/79196" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="法国元帅路易·赫伯特·利奥泰出生" Info="路易·赫伯特·贡萨伏·利奥泰（Louis-Hubert-Gonzalve Lyautey，1854年11月17日－1934年7月27日），法国政治家、军事家，元帅。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%B7%AF%E6%98%93%C2%B7%E8%B5%AB%E4%BC%AF%E7%89%B9%C2%B7%E5%88%A9%E5%A5%A5%E6%B3%B0" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="清朝军事人物丁汝昌出生" Info="丁汝昌（1836.11.18～1895. 2.12），中国海军北洋水师提督。字禹廷，安徽省庐江县人，1888年出任北洋海军提督。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%B8%81%E6%B1%9D%E6%98%8C" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="英国空想社会主义者罗伯特·欧文逝世" Info="罗伯特·欧文（Robert Owen，1771年5月14日 - 1858年11月17日），英国空想社会主义者，也是一位企业家、慈善家。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7%E6%AC%A7%E6%96%87" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="无产阶级革命家、中国工人运动领袖李立三出生" Info="李立三（1899年11月18日－1967年6月22日），无产阶级革命家，中国共产党的优秀党员，中国工人运动的杰出领导人之一。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E6%9D%8E%E7%AB%8B%E4%B8%89" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="贯通地中海与红海的苏伊士运河正式通航" Info="苏伊士运河（Suez Canal），又译苏彝士运河，是亚洲与非洲间的分界线，是全球少数具备大型商船通行能力的无船闸运河。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%8B%8F%E4%BC%8A%E5%A3%AB%E8%BF%90%E6%B2%B3" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国科学家乔治·沃尔德出生" Info="乔治·沃尔德（George Wald，1906年11月18日—1997年4月12日），美国生物化学家，生于纽约市，1927年获纽约大学科学学士学位，1932年获哥伦比亚大学哲学博士学位，后任哈佛大学教授。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%B9%94%E6%B2%BB%C2%B7%E6%B2%83%E5%B0%94%E5%BE%B7" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="http://baike.bdimg.com/cms/rc/r/image/2014-08-31/6a51f5cd8d300de6467f614728cc7aef_80_80.jpg" Title="法国雕塑家罗丹逝世" Info="罗丹是法国著名雕塑家。他在欧洲雕塑史上的地位，正如诗人但丁在欧洲文学史上的地位。他还是一位伟大的老师，学生马约尔和布德尔深受其影响，和他一起被誉为欧洲雕刻“三大支柱”。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%A5%A5%E5%8F%A4%E6%96%AF%E7%89%B9%C2%B7%E7%BD%97%E4%B8%B9" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="民间传奇人物廖添丁逝世" Info="廖添丁（1883年5月21日－1909年11月18日），台湾台中大度上堡秀水庄人，日据时期江湖人物。自幼丧父由姑妈抚养，18岁起因盗窃多次入狱。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%BB%96%E6%B7%BB%E4%B8%81" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="广州张黄事变爆发" Info="广州张黄事变是指在1927年11月17日凌晨，国民政府和中国国民党内部派系之一的张发奎、黄琪翔等人在广州发动政变，改组国民党广东省党部，广东省政府的事件。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%B9%BF%E5%B7%9E%E5%BC%A0%E9%BB%84%E4%BA%8B%E5%8F%98" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="拉脱维亚宣告独立" Info="拉脱维亚共和国（拉脱维亚语：Latvijas Republika），简称拉脱维亚。国名源自民族语，意为“铠甲”、“金属制的服装”，位于波罗的海东岸，北与爱沙尼亚，南与立陶宛，东与俄罗斯，东南与白俄罗斯接壤。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E6%8B%89%E8%84%B1%E7%BB%B4%E4%BA%9A" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="越南总理阮晋勇出生" Info="阮晋勇（越南语：Nguyễn Tấn Dũng，1949年11月17日—），别名三勇，京族，越南政治家，越南金瓯省金瓯市人，1967年6月10日加入越南共产党（1968年3月10日正式加入）。曾经就读于广西师范大学，后毕业于法律专业，获法学学士学位、高级政治理论学位。曾担任越共中央政治局委员，越南政府总理等职。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E9%98%AE%E6%99%8B%E5%8B%87" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="法国作家普鲁斯特逝世" Info="马塞尔·普鲁斯特（1871-1922，Marcel Proust）是20世纪法国最伟大的小说家之一，意识流文学的先驱与大师。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E9%A9%AC%E8%B5%9B%E5%B0%94%C2%B7%E6%99%AE%E9%B2%81%E6%96%AF%E7%89%B9" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="中国第一位女外交官袁晓园逝世" Info="袁晓园（1901年5月10日-2003年11月17日），女，江苏省常州市武进区人，毕业于法国普鲁士大学，金庸和琼瑶的姨妈，外交官。曾任第六、七届全国政协委员，民革中央监委。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%A2%81%E6%99%93%E5%9B%AD" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="美国宇航员艾伦·谢泼德出生" Info="艾伦·谢泼德（Alan Shepard）（1923年11月18日 —— 1998年7月21日）是美国第一位进入太空的宇航员。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%89%BE%E4%BC%A6%C2%B7%E8%B0%A2%E6%B3%BC%E5%BE%B7" Type="Clickable" />
 <local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
-    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="中国相声表演艺术家范振钰逝世" Info="范振钰（1927—2008）著名相声表演艺术家。1950年拜班德贵为师，相声泰斗马三立的再传弟子。四人帮”垮台后重返舞台。"
-    EventType="打开网页" EventData="https://baike.baidu.com/item/%E8%8C%83%E6%8C%AF%E9%92%B0" Type="Clickable" />
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="丹麦战争爆发" Info="普丹战争（又称第二次石勒苏益格战争、德丹战争、1864年战争）是1864年2月1日至10月30日普鲁士王国、奥地利帝国与丹麦王国在石勒苏益格和日德兰半岛爆发的军事冲突。该战争因丹麦王位继承问题引发，核心争议围绕石勒苏益格与荷尔斯泰因公国的归属权展开。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E4%B8%B9%E9%BA%A6%E6%88%98%E4%BA%89" Type="Clickable" />
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="日本动画界的国际级名家川尻善昭出生" Info="川尻善昭（Yoshiaki Kawajiri），日本动画制作师，Madhouse动画公司创始人之一。其作品以视觉风格和动作场景为特点，在欧美地区具有影响力。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%B7%9D%E5%B0%BB%E5%96%84%E6%98%AD" Type="Clickable" />
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
+    Logo="http://baike.bdimg.com/cms/rc/r/image/2014-08-31/3ee107801ebb520328db2f581fec0425_80_80.jpg" Title="丹麦物理学家尼尔斯·玻尔逝世" Info="尼尔斯·玻尔是丹麦物理学家。他提出的量子不连续性，成功地解释了氢原子和类氢原子的结构和性质。他结合普朗克的量子说和卢瑟福的原子核概念，提出了原子结构的玻尔模型。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E5%B0%BC%E5%B0%94%E6%96%AF%C2%B7%E7%8E%BB%E5%B0%94" Type="Clickable" />
+<local:MyListItem Margin="10,1,10,1" ToolTip="历史上的今天，点击查看详情"
+    Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="阿曼独立" Info="阿曼苏丹国（阿拉伯语：سلطنة عُمان，英语：The Sultanate of Oman），简称阿曼，是位于西亚，阿拉伯半岛东南沿海的一个国家，西北与阿拉伯联合酋长国接壤，西面毗邻沙特阿拉伯，西南靠近也门，阿曼按行政区域划分为11个省，省之下设有61个州，首都马斯喀特。截至2024年1月，阿曼人口516万。"
+    EventType="打开网页" EventData="https://baike.baidu.com/item/%E9%98%BF%E6%9B%BC/81384" Type="Clickable" />
 
     </StackPanel>
 </local:MyCard>
@@ -336,7 +345,7 @@ EventType="打开帮助" EventData="https://mcnews.meloong.com/VersionArchiveLis
                             <TextBlock FontSize="18" Foreground="{DynamicResource ColorBrush2}">
                                 <Bold>PCL2 杂志主页</Bold>
                             </TextBlock>
-                            <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="261117:53dfc17" ToolTip="当前版本号(非git), 点击复制" EventType="复制文本" EventData="261117:53dfc17"
+                            <local:MyIconTextButton ColorType="Highlight" Margin="4,0" Text="261118:eb164e3" ToolTip="当前版本号(非git), 点击复制" EventType="复制文本" EventData="261118:eb164e3"
     LogoScale="1.1" Logo="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,10">
