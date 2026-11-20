@@ -1,6 +1,8 @@
 """构建 PCL2 杂志主页
 
-调用 HomepageBuilder 构建工程，并写入 output/Custom.xaml 与版本号 ini。
+调用 HomepageBuilder 构建工程，写入 output/Custom.xaml 与版本号 ini。
+modules/axaml_export.py 会顺带产出 output/Custom.axaml（PCL-CE 用），
+两者内容一致，只是方言不同。
 """
 import datetime
 import hashlib
@@ -14,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 OUTPUT = REPO / "output" / "Custom.xaml"
+AXAML_OUTPUT = REPO / "output" / "Custom.axaml"
 INI = REPO / "output" / "Custom.xaml.ini"
 
 
@@ -30,6 +33,7 @@ def main() -> int:
 
     env = os.environ.copy()
     env["MAGAZINE_VERSION_ID"] = f"{date}:{digest[:7]}"
+    env["MAGAZINE_AXAML_OUT"] = str(AXAML_OUTPUT)
 
     result = subprocess.run(
         [
