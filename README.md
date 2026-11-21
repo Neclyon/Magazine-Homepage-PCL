@@ -57,14 +57,17 @@ uv run main.py
   ``` 
   5. 回到启动页即可看到杂志主页。
  
-## 鸣谢： 
- 
-- LingyunAwA (JingHai-Lingyun @Github)(1913532130 @QQ) 
-- Mr.Joker (Joker2184 @Github)(754284083 @QQ) 
-- Essdak1986 (1837750594 @QQ) 
-- tu_xing (2480379448 @QQ) 
-- Nattiden (Light-Beacon @Github)(2682645990 @QQ) 
- 
+## 鸣谢：  
+   
+### 开发协作  
+- [MoYuan-CN](https://github.com/MoYuan-CN)  
+- [Joker2184](https://github.com/Joker2184)  
+- [Light-Beacon](https://github.com/Light-Beacon)  
+  
+### 测试人员  
+- Essdak1986 (1837750594 @QQ)   
+- tu_xing (2480379448 @QQ)   
+  
 ## License 
  
 - `src/`：代码与工程文件，[Apache License 2.0](LICENSE) 
