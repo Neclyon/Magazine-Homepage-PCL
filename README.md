@@ -23,8 +23,7 @@ src/structures/             页面模版、卡片模版与构件
 src/modules/                构建时脚本（Wiki / 新闻 / 历史上的今天） 
 src/assets/                 资源文件 
 src/main.py                 构建入口 
-output/Custom.xaml          构建产物 
-``` 
+```
  
 ## 本地构建 
  
@@ -36,7 +35,7 @@ uv run main.py
 ``` 
  
 产物写入仓库根目录的 `output/Custom.xaml`，版本号写入 `output/Custom.xaml.ini`。 
-直接运行 `uv run builder build --project Project.yml --output-path ../output/Custom.xaml`时，请注意版本号不会被写入。 
+直接运行 `uv run builder build --project Project.yml --output-path ../output/Custom.xaml`时，请注意版本号不会被写入。  
  
 ## 使用指导 
  
@@ -53,7 +52,7 @@ uv run main.py
   3. 下滑，在“主页”卡片选择“联网更新”。 
   4. 在地址栏内输入以下地址： 
   ``` 
-  https://gh-proxy.com/https://github.com/Neclyon/Magazine-Homepage-PCL/raw/main/output/Custom.xaml 
+  https://gh-proxy.com/https://github.com/Neclyon/Magazine-Homepage-PCL/raw/output/Custom.xaml 
   ``` 
   5. 回到启动页即可看到杂志主页。
  
@@ -70,7 +69,7 @@ uv run main.py
   
 ## License 
  
-- `src/`：代码与工程文件，[Apache License 2.0](LICENSE) 
-- `output/`：生成的主页产物，[CC BY-NC-SA 3.0](LICENSE) 
+- `main`分支：代码与工程文件，[Apache License 2.0](https://github.com/Neclyon/Magazine-Homepage-PCL/blob/main/LICENSE) 
+- `output`分支：生成的主页产物，[CC BY-NC-SA 3.0](https://github.com/Neclyon/Magazine-Homepage-PCL/blob/output/LICENSE) 
  
 ***感谢使用。请给仓库点颗 Star，谢谢。*** 

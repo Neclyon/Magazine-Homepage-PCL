@@ -10,3 +10,6 @@ __pycache__/
 # 本地调试残留
 nohup.out
 *.log
+
+# 构建产物，发布在 output 分支
+output/

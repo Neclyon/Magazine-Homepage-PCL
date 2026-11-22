@@ -5,13 +5,16 @@ on:
     - cron: "0 4 * * *" # 每天北京时间中午12点
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-file:
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install uv
         uses: astral-sh/setup-uv@v5
@@ -28,18 +31,41 @@ jobs:
         run: |
           uv run main.py
 
-      - name: Commit and push changes
+      - name: Publish build output to `output` branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CC_LICENSE: ${{ vars.CC_LICENSE }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 防止没有更改时报错
-          if [[ -n $(git status -s) ]]; then
-            git add output/ --all
-            git commit -m "chore: updated"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/Neclyon/Magazine-Homepage-PCL.git HEAD:main
-          else
-            echo "No changes to commit"
+          set -euo pipefail
+
+          remote="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          publish_dir=$(mktemp -d)
+
+          # 在一个干净的临时仓库里重建 output 分支，永远只有 1 个提交
+          cd "$publish_dir"
+          git init -q -b output
+          git remote add origin "$remote"
+          cp -a "$GITHUB_WORKSPACE/output/." .
+          # 产物按 CC BY-NC-SA 3.0 发布，许可全文来自仓库变量 CC_LICENSE
+          [ -n "$CC_LICENSE" ] || { echo "仓库变量 CC_LICENSE 未设置" >&2; exit 1; }
+          printf '%s\n' "$CC_LICENSE" > ./LICENSE
+
+          git add -A
+          new_tree=$(git write-tree)
+
+          # 和上一次发布的产物比对，没有变化就不推送
+          old_tree=""
+          if git fetch -q --depth=1 origin output 2>/dev/null; then
+            old_tree=$(git rev-parse 'FETCH_HEAD^{tree}')
           fi
+
+          if [ "$new_tree" = "$old_tree" ]; then
+            echo "产物无变化，跳过推送"
+            exit 0
+          fi
+
+          git -c user.name="github-actions[bot]" \
+              -c user.email="github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "chore: build $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push -q -f origin output
+          echo "output 分支已更新"
